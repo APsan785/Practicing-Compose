@@ -1,8 +1,10 @@
 package com.apsan.practicingcompose
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -22,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Hey guys")
+                    Greeting("Yoo...")
                 }
             }
         }
@@ -31,13 +33,25 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(
+        text = "Hello $name!",
+        color = MaterialTheme.colors.primary,
+        modifier = Modifier.background(MaterialTheme.colors.secondaryVariant)
+    )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, name = "Preview1")
 @Composable
 fun DefaultPreview() {
+    PracticingComposeTheme(darkTheme = true) {
+        Greeting("Yoo...")
+    }
+}
+
+@Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES, showSystemUi = true)
+@Composable
+fun DefaultPreview1() {
     PracticingComposeTheme {
-        Greeting("Android")
+        Greeting("Yoo...")
     }
 }
