@@ -127,7 +127,7 @@ class MainActivity : ComponentActivity() {
                                     .fillMaxWidth()
                                     .background(Color(0xFFC6BEDA))
                                     .padding(18.dp),
-                                color = Color.Blue
+                                color = Color(0xFFD654B1)
                             )
                         }
                     }
