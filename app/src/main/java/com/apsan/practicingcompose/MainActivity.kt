@@ -69,7 +69,7 @@ class MainActivity : ComponentActivity() {
                                 cursorColor = Color.White,
                                 focusedBorderColor = Color.Yellow,
                                 unfocusedBorderColor = Color.White,
-                                focusedLabelColor = Color.Yellow
+                                focusedLabelColor = Color.Red
                             ),
                             keyboardOptions = KeyboardOptions(
                                 imeAction = ImeAction.Done,
